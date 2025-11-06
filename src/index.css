@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------
+   Global Styles - KnowYourMood
+--------------------------------*/
+
+:root {
+  --primary-glow: 0 0 25px rgba(99, 102, 241, 0.6);
+  --accent-glow: 0 0 30px rgba(236, 72, 153, 0.6);
+  --text-gradient: linear-gradient(90deg, #a78bfa, #ec4899, #f472b6);
+  --bg-gradient: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+}
+
+body {
+  @apply font-[Poppins] text-gray-100 min-h-screen;
+  background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+  background-attachment: fixed;
+  color-scheme: dark;
+}
+
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(167, 139, 250, 0.6);
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(236, 72, 153, 0.8);
+}
+
+/* Glow Text Effect */
+.glow-text {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: var(--primary-glow);
+}
+
+/* Card Style */
+.glow-card {
+  @apply bg-[#18122B] bg-opacity-60 rounded-2xl p-6 shadow-lg border border-[#4c3575];
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glow-card:hover {
+  box-shadow: 0 0 40px rgba(236, 72, 153, 0.4);
+  transform: translateY(-4px);
+}
+
+/* Buttons */
+.glow-btn {
+  @apply px-6 py-2 rounded-full font-semibold text-white transition-all duration-300;
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
+  box-shadow: var(--accent-glow);
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 40px rgba(236, 72, 153, 0.7);
+  transform: scale(1.05);
+}
+
+/* Input Fields */
+.glow-input {
+  @apply w-full px-4 py-2 mt-2 bg-[#1f1b3a] text-white rounded-xl border border-[#4c3575] focus:outline-none focus:ring-2 focus:ring-pink-500;
+}
+
+/* Navbar */
+.navbar {
+  @apply flex justify-between items-center px-8 py-4 backdrop-blur-lg bg-opacity-20 border-b border-[#4c3575];
+  background: rgba(15, 12, 41, 0.6);
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+}
+
+/* Page Transitions */
+.page-fade {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+.footer {
+  @apply text-center text-gray-400 py-6 text-sm;
+}
+.footer span {
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
