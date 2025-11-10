@@ -1,6 +1,6 @@
 import axios from "axios"; //library to make HTTP requests
 
-export const API_BASE = "http://localhost:8080/api"; //the base URL
+export const API_BASE = "https://knowyourmoodbackend-production.up.railway.app/api"; //the base URL
 
 const api = axios.create({
   baseURL: API_BASE,
@@ -16,3 +16,4 @@ api.interceptors.request.use(config => {
   return config;// handles request success
 }, error => Promise.reject(error));// handles request errors
 export default api;
+
